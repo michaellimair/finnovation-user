@@ -7,22 +7,49 @@
  *
  */
 
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Router, Switch, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 import GlobalStyle from '../../global-styles';
+import ProfilePage from '../ProfilePage';
+import BotPage from '../BotPage';
+import history from '../../utils/history';
+import CustomDrawer from '../../components/Drawer';
+import AppHeader from '../../components/Header';
 
-export default function App() {
+const App = () => {
+  const [drawerOpened, toggleDrawer] = useState(false);
+  const [currentPage, setCurrentPage] = useState("Home");
+
   return (
     <div>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      <nav>
+        <CustomDrawer
+          drawerOpened={drawerOpened}
+          toggleDrawer={toggleDrawer}
+          navigateToPage={(path, pageName) => {
+            toggleDrawer(false);
+            setCurrentPage(pageName);
+            history.push(path)
+          }}
+        />
+        <AppHeader openDrawer={() => toggleDrawer(true)} title={currentPage} />
+      </nav>
+      <Router history={history}>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/profile" component={ProfilePage} />
+          <Route exact path="/bot" component={BotPage} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </Router>
       <GlobalStyle />
     </div>
   );
 }
+
+export default App;
