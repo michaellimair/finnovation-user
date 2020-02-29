@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { DragDropContext } from 'react-beautiful-dnd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRobot } from '@fortawesome/free-solid-svg-icons';
 import robotImage from '../../images/trading_bot.jpg';
 
 import './styles.css';
+import BotSkillsDragDrop from './components/dragDrop';
 
 const BotImage = () => (
   <div id="robot-icon">
@@ -25,7 +27,11 @@ const BotHeaderDisplay = () => {
   );
 }
 
-const BotDetails = (props) => <div>botdetails</div>
+const BotDetails = (props) => (
+  <div style={{flexDirection: 'row', display: 'flex'}}>
+    <BotSkillsDragDrop />
+  </div>
+)
 
 const BotPage = (props) => (
   <div id="bot-page">
