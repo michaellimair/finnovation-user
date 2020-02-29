@@ -1,2 +1,22 @@
 #home-news {
+  display: flex;
+  flex: 2;
+  overflow: hidden;
+  min-height: min-content;
+}
+
+#news-container {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  /* height: 420px; */
+}
+
+.news-item {
+  margin-bottom: 16px;
+}
+
+.news-item-title {
+  padding-bottom: 8px;
+  font-weight: bold;
 }

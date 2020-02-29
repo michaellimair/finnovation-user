@@ -10,7 +10,7 @@ export class HomeNews extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('https://lzl.red/news')
+    axios.get('https://lzl.red/api/news')
       .then(res => {
         const news = res.data;
         this.setState({ news });
@@ -19,11 +19,20 @@ export class HomeNews extends React.Component {
 
   render() {
     return (
-      <div id="home-news" className="dash-column" style={{"overflow": "auto"}}>
+      <div id="home-news" className="dash-column">
         <Card className="dash-column-card">
-          <ul>
-            { this.state.news.map(news_ => <li><strong>{news_.title}:</strong>{news_.content}</li>)}
-          </ul>
+          <div id="news-container">
+            {/* { this.state.news.map(news_ => news_.content)} */}
+            { this.state.news.map(news_ => (
+              <div className="news-item">
+                <div className="news-item-title">{news_.title}:</div>
+                <div className="news-item-content">{news_.content}</div>
+              </div>
+            ))}
+            {/* <ul>
+              { this.state.news.map(news_ => <li><strong>{news_.title}:</strong>{news_.content}</li>)}
+            </ul> */}
+          </div>
         </Card>
       </div>
     )

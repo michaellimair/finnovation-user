@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from '@material-ui/core';
 import './styles.css';
-import BotStats from '../BotStats';
+import HomeTutorialVideo from '../HomeTutorialVideo';
 import HomeEditor from '../HomeEditor';
 import HomeNews from '../HomeNews';
 
@@ -15,7 +15,7 @@ const DashboardColumns = (props) => (
         flex: 1
       }}
     >
-      <BotStats />
+      <HomeTutorialVideo />
       <HomeNews />
     </div>
   </div>
