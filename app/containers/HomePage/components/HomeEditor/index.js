@@ -5,7 +5,7 @@ import './styles.css';
 const HomeEditor = (props) => (
   <div id="home-editor" className="dash-column">
     <Card className="dash-column-card">
-        home editor
+      <iframe src="https://5e5a327b6760e.htmlsave.com/" id="blockly-frame" title="blockly"></iframe>
     </Card>
   </div>
 )
