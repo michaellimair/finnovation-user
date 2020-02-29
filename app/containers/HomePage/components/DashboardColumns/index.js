@@ -7,9 +7,17 @@ import HomeNews from '../HomeNews';
 
 const DashboardColumns = (props) => (
   <div id="home-dash-columns">
-    <BotStats />
     <HomeEditor />
-    <HomeNews />
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        flex: 1
+      }}
+    >
+      <BotStats />
+      <HomeNews />
+    </div>
   </div>
 )
 
