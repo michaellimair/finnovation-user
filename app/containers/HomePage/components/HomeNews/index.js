@@ -19,13 +19,13 @@ export class HomeNews extends React.Component {
 
   render() {
     return (
-      <div id="home-news" className="dash-column">
-      <Card className="dash-column-card">
-      <ul>
-    { this.state.news.map(news_ => <li><strong>{news_.title}:</strong>{news_.content}</li>)}
-      </ul>
-    </Card>
-  </div>
+      <div id="home-news" className="dash-column" style={{"overflow": "auto"}}>
+        <Card className="dash-column-card">
+          <ul>
+            { this.state.news.map(news_ => <li><strong>{news_.title}:</strong>{news_.content}</li>)}
+          </ul>
+        </Card>
+      </div>
     )
   }
 }
