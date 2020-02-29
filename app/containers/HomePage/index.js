@@ -6,17 +6,13 @@
  */
 
 import React, { useState } from 'react';
-import AppHeader from '../../components/Header';
-import CustomDrawer from '../../components/Drawer';
+import DashboardColumns from './components/DashboardColumns';
+import './styles.css';
 
-const HomePage = (props) => {
-  const [drawerOpened, toggleDrawer] = useState(false);
-
-  return (
-    <div>
-      Home Page
-    </div>
-  );
-}
+const HomePage = (props) => (
+  <div>
+    <DashboardColumns />
+  </div>
+)
 
 export default HomePage;
