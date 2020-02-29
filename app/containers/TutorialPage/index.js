@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-const ProfilePage = (props) => (
+const TutorialPage = (props) => (
   <div>
       Profile
   </div>
 )
 
-export default ProfilePage;
+export default TutorialPage;

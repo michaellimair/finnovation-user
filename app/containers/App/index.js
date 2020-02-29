@@ -16,7 +16,7 @@ import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 import GlobalStyle from '../../global-styles';
-import ProfilePage from '../ProfilePage';
+import TutorialPage from '../TutorialPage';
 import BotPage from '../BotPage';
 import history from '../../utils/history';
 import CustomDrawer from '../../components/Drawer';
@@ -44,7 +44,7 @@ const App = () => {
         <Router history={history}>
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route exact path="/profile" component={ProfilePage} />
+            <Route exact path="/tutorial" component={TutorialPage} />
             <Route exact path="/bot" component={BotPage} />
             <Route component={NotFoundPage} />
           </Switch>

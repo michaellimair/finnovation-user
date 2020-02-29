@@ -7,7 +7,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import Divider from '@material-ui/core/Divider';
 import { makeStyles } from '@material-ui/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRobot } from '@fortawesome/free-solid-svg-icons';
+import { faRobot, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
 const useStyles = makeStyles({
   list: {
@@ -19,6 +19,7 @@ const useStyles = makeStyles({
 });
 
 const RobotIcon = () => <FontAwesomeIcon icon={faRobot} />;
+const StudyIcon = () => <FontAwesomeIcon icon={faGraduationCap} />;
 
 const CustomDrawer = ({drawerOpened, toggleDrawer, navigateToPage}, props) => {
   const classes = useStyles();
@@ -38,14 +39,14 @@ const CustomDrawer = ({drawerOpened, toggleDrawer, navigateToPage}, props) => {
             path: '/'
           },
           {
-            name: 'Profile',
-            icon: ProfileIcon,
-            path: '/profile'
-          },
-          {
             name: 'Bot',
             icon: RobotIcon,
             path: '/bot'
+          },
+          {
+            name: 'Tutorial',
+            icon: StudyIcon,
+            path: '/tutorial'
           }
         ].map(({name, icon: Icon, path}, index) => (
           <ListItem button key={name} onClick={() => navigateToPage(path, name)}>

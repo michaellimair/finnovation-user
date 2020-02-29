@@ -6,6 +6,7 @@ import robotImage from '../../images/trading_bot.jpg';
 
 import './styles.css';
 import BotSkillsDragDrop from './components/dragDrop';
+import UnlockableSkills from './components/unlockables';
 
 const BotImage = () => (
   <div id="robot-icon">
@@ -37,6 +38,7 @@ const BotPage = (props) => (
   <div id="bot-page">
     <BotHeaderDisplay />
     <BotDetails />
+    <UnlockableSkills />
   </div>
 )
 

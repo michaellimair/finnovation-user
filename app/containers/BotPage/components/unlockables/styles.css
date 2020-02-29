@@ -1,0 +1,37 @@
+#unlockables {
+  padding: 16px;
+}
+
+#unlockable-itemlist {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8px;
+}
+
+#unlockable-list {
+  flex: 11;
+  padding: 8px 16px;
+  height: 600px;
+  overflow: scroll;
+  background-color: lightgrey;
+}
+
+#unlockable-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 4;
+}
+
+.unlockable-item {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 12px 8px;
+  border-radius: 8px;
+}
+
+.locked-icon {
+  margin-right: 8px;
+}
