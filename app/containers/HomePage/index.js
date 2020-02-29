@@ -10,7 +10,7 @@ import DashboardColumns from './components/DashboardColumns';
 import './styles.css';
 
 const HomePage = (props) => (
-  <div>
+  <div id="home-page">
     <DashboardColumns />
   </div>
 )

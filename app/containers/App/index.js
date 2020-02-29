@@ -10,6 +10,7 @@
 import React, { useState } from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import './styles.css';
 
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
@@ -26,7 +27,7 @@ const App = () => {
   const [currentPage, setCurrentPage] = useState("Home");
 
   return (
-    <div>
+    <div id="app">
       <nav>
         <CustomDrawer
           drawerOpened={drawerOpened}
@@ -39,14 +40,16 @@ const App = () => {
         />
         <AppHeader openDrawer={() => toggleDrawer(true)} title={currentPage} />
       </nav>
-      <Router history={history}>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/profile" component={ProfilePage} />
-          <Route exact path="/bot" component={BotPage} />
-          <Route component={NotFoundPage} />
-        </Switch>
-      </Router>
+      <div id="app-page">
+        <Router history={history}>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/profile" component={ProfilePage} />
+            <Route exact path="/bot" component={BotPage} />
+            <Route component={NotFoundPage} />
+          </Switch>
+        </Router>
+      </div>
       <GlobalStyle />
     </div>
   );
