@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="chart.js"></script>
+    <link rel="stylesheet" href="index.css">
+    
+    <script src="index.js"></script>
+    <script src="http://cdnjs.com/libraries/Chart.js"></script>
+
+
+</head>
+<body>
+
+<nav>
+    <header>Sales Report</header>
+    <section>
+      <header>Main</header>
+      <ul>
+        <li class="active">Dashboard</li>
+        <li data-value="8">Reports</li>
+        <li>Groups</li>
+      </ul>
+    </section>
+    <section>
+      <header>Account</header>
+      <ul>
+        <li>Activity</li>
+        <li data-value="4">Messages</li>
+        <li>Downloads</li>
+      </ul>
+    </section>
+    <section>
+      <header>Categories</header>
+      <ul>
+        <li class="red">Credit Sales</li>
+        <li class="yellow">Channel Sales</li>
+        <li class="green">Direct Sales</li>
+        <li class="new"> <i class="fa fa-plus-circle"> </i> Add Category</li>
+      </ul>
+    </section>
+  </nav>
+  <article>
+    <header>
+      <div class="title">Dashboard</div>
+      <div class="user"></div>
+      <div class="interval">
+        <ul>
+          <li>Weekly</li>
+          <li class="active">Monthly</li>
+        </ul>
+      </div>
+    </header>
+
+    <section>
+      <header>Total Sales</header>
+      <div class="inlineChart">
+        <canvas id="c2" width="100" height="100"></canvas>
+        <div class="info">
+          <div class="value">$36,146</div>
+          <div class="title">Total profit</div>
+        </div>
+      </div>
+      <div class="inlineChart">
+        <canvas id="c3" width="100" height="100"></canvas>
+        <div class="info">
+          <div class="value">734</div>
+          <div class="title">Sign-ups in total</div>
+        </div>
+      </div>
+      <div class="inlineChart">
+        <canvas id="c4" width="100" height="100"></canvas>
+        <div class="info">
+          <div class="value">$15,650</div>
+          <div class="title">Sponsorships</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRAPGS -->
+    <section id="lzl">
+        <img src="freq.png" id="freq">
+        <img src="ror.png" id="ror">
+    </section>
+    <!-- GRAPHS END -->
+
+
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>Leaderboard</th>
+            <th>days trading</th>
+            <th>total profit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Michael Lim</td>
+            <td>20</td>
+            <td>$13,142</td>
+          </tr>
+          <tr>
+            <td>Michelle Lim</td>
+            <td>18</td>
+            <td>$8,550</td>
+          </tr>
+          <tr>
+            <td>Michael Lee</td>
+            <td>15</td>
+            <td>$4,170</td>
+          </tr>
+          <tr>
+            <td>Michael Leem</td>
+            <td>25</td>
+            <td>$2,974</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </article>
+    
+</body>
+</html>
+
+<script src="chart.js"></script>
+<script src="index.js"></script>
