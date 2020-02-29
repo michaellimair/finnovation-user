@@ -1,0 +1,34 @@
+#robot-icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#robot-icon img {
+  height: 60px;
+  border-radius: 30px;
+}
+
+#bot-header {
+  display: flex;
+  padding: 16px;
+  /* width: 100%; */
+  background-color: lightpink;
+  align-items: center;
+  flex-direction: row;
+  /* flex-basis: 60px; */
+}
+
+#bot-header-info {
+  margin-left: 16px;
+}
+
+#bot-page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: lightcoral;
+}
