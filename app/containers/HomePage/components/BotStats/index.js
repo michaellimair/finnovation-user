@@ -5,7 +5,7 @@ import './styles.css';
 const BotStats = (props) => (
   <div id="bot-stats" className="dash-column">
     <Card className="dash-column-card">
-        bot stats
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/LI2BARWJ1a8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </Card>
   </div>
 )
